@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resumo</title>
+  <style>
+    body {
+      background-color: rgb(242, 0, 242);
+    }
+
+    h1 {
+      align-self: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      border: 2px double blueviolet;
+      border-radius: 30px;
+    }
+
+    h1:hover {
+      background-color: #df0cd4;
+      border-radius: 100px;
+      box-shadow: #0000;
+      font-size: large;
+      opacity: initial;
+      font-size: 100px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="elemento">Passe o mouse aqui</h1>
+  <audio id="trote">
+    <source src="audio.mp3" type="audio/mp3" />
+  </audio>
+  <script>
+    const myElement = document.getElementById("elemento");
+    const myAudio = document.getElementById("trote");
+
+    myElement.addEventListener("mouseenter", () => {
+      myAudio.currentTime = 0;
+      myAudio.play();
+    });
+  </script>
+</body>
+
+</html>
